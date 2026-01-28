@@ -6,7 +6,7 @@ dotenv.config()
 
 const app=express()
 
-app.use(json())
+app.use(json({ limit: "5mb" }))
 app.use('/',usr)
 
 app.listen(process.env.PORT,()=>{
